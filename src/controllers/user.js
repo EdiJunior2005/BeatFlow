@@ -27,7 +27,7 @@ const login = async (req, res)=>{
     if (!user) {
         res.status(401).json({mensagem: 'usuario ou senha invalidos!'})
     }
-    const correto = await bcrypt.compare(username, user.password)
+    const correto = await bcrypt.compare(password, user.password)
     if (!correto) {
         res.status(402).json({mensagem: 'usuario ou senha errados'})
     }
