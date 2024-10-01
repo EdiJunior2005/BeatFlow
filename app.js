@@ -10,7 +10,7 @@ dotenv.config()
 conect_mongoose()
 
 app.use(express.json())
-app.use("/protegido", userRoutes)
+app.use("/", userRoutes)
 app.use("/musicas", musicaRoutes)
 app.use("/playlists", playlistRoutes)
 
